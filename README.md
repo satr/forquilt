@@ -8,4 +8,5 @@ https://archive.codeplex.com/?p=forquilt
 
 Initial URL was forquilt.codeplex.com
 
-https://github.com/satr/forquilt/blob/master/docs/images/screenshot.jpg?raw=true
+![ForQuilt application](docs/images/screenshot.jpg)
+![Capture from webcamera](docs/images/captured-from-web-camera.jpg)
