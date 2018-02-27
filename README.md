@@ -7,3 +7,5 @@ This project (from 2013) has been transferred from the site CodePlex.com as it w
 https://archive.codeplex.com/?p=forquilt
 
 Initial URL was forquilt.codeplex.com
+
+https://github.com/satr/forquilt/blob/master/docs/images/screenshot.jpg?raw=true
