@@ -1,0 +1,20 @@
+Version 1.0
+Fixed bugs
+* 01.06.2013
+- Limited selection area after the Copy operation.
+* 02.06.2013
+- Application crashed if rectangular selection was more than selection image dimensions.
+- Copied image was seen in the clipboard area behind work tables
+Changes
+* 01.06.2013
+- Copy/Paste operation was reworked
+- When repeat operation starts click on canvas creates a first copy of an object, red line displays distanse and direction of copies 
+- On finish repeat operation generated objects are automatically selected and this selection is grouped
+* 28.06.2013
+- Draw Rectangle operation was reworked so it draws it by lines which can be selected properly and erased as line.
+New Features
+* 01.06.2013
+- Clipboard view is added (invoked by button "Show clipboard")
+- Copied content can be Pasted to other programs as an image
+- Pasted content is automatically selected
+- Every next Pasted content (while clipboard was not changed) is moved to 10x10 offset

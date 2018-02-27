@@ -1,0 +1,76 @@
+﻿<!--
+Copyright © 2013 ForQuilt.CodePlex.com
+All rights reserved.       
+-->
+<UserControl x:Class="ForQuilt.App.Views.Controls.VerticalToolBoxControlView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:controls="clr-namespace:ForQuilt.App.Views.Controls" 
+             xmlns:r="clr-namespace:ForQuilt.App.Helpers.Localization"
+             mc:Ignorable="d">
+    <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+        <StackPanel Orientation="Vertical" VerticalAlignment="Top" Width="80">
+        <GroupBox Header="{r:Res Name=Title_Draw}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="34"></ColumnDefinition>
+                    <ColumnDefinition Width="34"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Button Grid.Column="0" Grid.Row="0" Command="{Binding SelectByLassoCommand}" Width="32" Height="32" Margin="1,1,1,1" ToolTip="{r:Res Name=ToolTip_Select_by_lasso}">
+                    <Image Source="/Properties\Images/SelectAreaByLassoIcon.png" />
+                </Button>
+                <Button Grid.Column="1" Grid.Row="0" Command="{Binding SelectByRectangleCommand}" Width="32" Height="32" Margin="1,1,1,1" ToolTip="{r:Res Name=ToolTip_Select_by_rectangle}">
+                    <Image Source="/Properties\Images/SelectAreaByRectangleIcon.png" />
+                </Button>
+                <Button Grid.Column="0" Grid.Row="1" Command="{Binding DrawCommand}"  Width="32" Height="32" Margin="1,1,1,1" ToolTip="{r:Res Name=ToolTip_Draw}">
+                    <Image Source="/Properties\Images/DrawIcon.png" />
+                </Button>
+                <Button Grid.Column="1" Grid.Row="1" Command="{Binding EraseCommand}"  Width="32" Height="32" Margin="1,1,1,1" ToolTip="{r:Res Name=ToolTip_Erase_drawing}">
+                    <Image Source="/Properties\Images/EraseIcon.png" />
+                </Button>
+                <controls:DrawLineControlView Grid.Column="0" Grid.Row="2" Command="{Binding DrawLineCommand}"  Width="32" Height="32" Margin="1,1,1,1">
+                    </controls:DrawLineControlView>
+               <Button Grid.Column="1" Grid.Row="2" Command="{Binding RepeateSelectionCommand}"  Width="32" Height="32" Margin="1,1,1,1" ToolTip="{r:Res Name=ToolTip_Repeate_selected_drawings_or_images}">
+                    <Image Source="/Properties\Images/RepeateSelectionIcon.png" />
+                </Button>
+                <Button Grid.Column="0" Grid.Row="4" Command="{Binding DrawRectangleCommand}"  Width="32" Height="32" Margin="1,1,1,1" ToolTip="{r:Res Name=ToolTip_Draw_rectangle_or_square}">
+                    <Image Source="/Properties\Images/DrawRectangleIcon.png" />
+                </Button>
+                <Button Grid.Column="1" Grid.Row="4" Command="{Binding DrawEllipseCommand}"  Width="32" Height="32" Margin="1,1,1,1" ToolTip="{r:Res Name=ToolTip_Draw_ellipse_or_circle}">
+                    <Image Source="/Properties\Images/DrawEllipseIcon.png" />
+                </Button>
+                <Button Grid.Column="0" Grid.Row="5" Command="{Binding ChangeColorCommand}"  Width="32" Height="32" Margin="1,1,1,1" ToolTip="{r:Res Name=ToolTip_Change_color_of_selected_drawing}">
+                    <Image Source="/Properties\Images/ChangeColorIcon.png" />
+                </Button>
+                <Button Grid.Column="1" Grid.Row="5" Command="{Binding ChangeThicknessCommand}"  Width="32" Height="32" Margin="1,1,1,1" ToolTip="{r:Res Name=ToolTip_Change_thickness_of_selected_drawing}">
+                    <Image Source="/Properties\Images/ChangeThicknessIcon.png" />
+                </Button>
+                <Button Grid.Column="0" Grid.Row="6" Command="{Binding GroupDrawingsCommand}"  Width="32" Height="32" Margin="1,1,1,1" ToolTip="{r:Res Name=ToolTip_Group_selected_drawings}">
+                    <Image Source="/Properties\Images/GroupDrawingsIcon.png" />
+                </Button>                
+                <Button Grid.Column="1" Grid.Row="6" Command="{Binding UnGroupDrawingsCommand}"  Width="32" Height="32" Margin="1,1,1,1" ToolTip="{r:Res Name=ToolTip_Ungroup_selected_drawings}">
+                    <Image Source="/Properties\Images/UnGroupDrawingsIcon.png" />
+                </Button>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="{r:Res Name=Title_Color}" ToolTip="{r:Res Name=ToolTip_Drawing_color}">
+            <controls:ColorPickControlView />
+        </GroupBox>
+        <GroupBox Header="{r:Res Name=Title_Thickness}" ToolTip="{r:Res Name=ToolTip_Drawing_thikness}">
+            <controls:DrawingThicknessControlView />
+        </GroupBox>        
+    </StackPanel>
+    </ScrollViewer>
+</UserControl>

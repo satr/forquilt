@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Title_Add_Open" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Title_Color" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="Title_Draw" xml:space="preserve">
+    <value>Draw</value>
+  </data>
+  <data name="Title_Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="Title_Main_Work_Table" xml:space="preserve">
+    <value>Main Work Table</value>
+  </data>
+  <data name="Title_Order" xml:space="preserve">
+    <value>Order</value>
+  </data>
+  <data name="Title_ForQuilt" xml:space="preserve">
+    <value>ForQuilt</value>
+  </data>
+  <data name="Title_Rotate" xml:space="preserve">
+    <value>Rotate</value>
+  </data>
+  <data name="Title_Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Title_Sketch_Work_Table" xml:space="preserve">
+    <value>Sketch Work Table</value>
+  </data>
+  <data name="Title_Thickness" xml:space="preserve">
+    <value>Thickness</value>
+  </data>
+  <data name="Title_Timer" xml:space="preserve">
+    <value>Timer</value>
+  </data>
+  <data name="ToolTip_Bring_to_front" xml:space="preserve">
+    <value>Bring to front</value>
+  </data>
+  <data name="ToolTip_Change_color_of_selected_drawing" xml:space="preserve">
+    <value>Change color of selected drawing</value>
+  </data>
+  <data name="ToolTip_Change_thickness_of_selected_drawing" xml:space="preserve">
+    <value>Change thickness of selected drawing</value>
+  </data>
+  <data name="ToolTip_Clear_all" xml:space="preserve">
+    <value>Clear all</value>
+  </data>
+  <data name="ToolTip_Copy" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="ToolTip_Crop" xml:space="preserve">
+    <value>Crop</value>
+  </data>
+  <data name="ToolTip_Cut" xml:space="preserve">
+    <value>Cut</value>
+  </data>
+  <data name="ToolTip_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="ToolTip_Draw" xml:space="preserve">
+    <value>Draw</value>
+  </data>
+  <data name="ToolTip_Drawing_color" xml:space="preserve">
+    <value>Drawing color</value>
+  </data>
+  <data name="ToolTip_Drawing_thikness" xml:space="preserve">
+    <value>Drawing thikness</value>
+  </data>
+  <data name="ToolTip_Draw_ellipse_or_circle" xml:space="preserve">
+    <value>Draw ellipse or circle</value>
+  </data>
+  <data name="ToolTip_Draw_line" xml:space="preserve">
+    <value>Draw line</value>
+  </data>
+  <data name="ToolTip_Draw_rectangle_or_square" xml:space="preserve">
+    <value>Draw rectangle or square</value>
+  </data>
+  <data name="ToolTip_Erase_drawing" xml:space="preserve">
+    <value>Erase drawing</value>
+  </data>
+  <data name="ToolTip_Exit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="ToolTip_Export_selected_area_as_image_to_file" xml:space="preserve">
+    <value>Export selected area as image to file</value>
+  </data>
+  <data name="ToolTip_Export_work_area_as_image_to_file" xml:space="preserve">
+    <value>Export work area as image to file</value>
+  </data>
+  <data name="ToolTip_Group_selected_drawings" xml:space="preserve">
+    <value>Group selected drawings</value>
+  </data>
+  <data name="ToolTip_Import_image_from_file" xml:space="preserve">
+    <value>Import image from file</value>
+  </data>
+  <data name="ToolTip_Paste" xml:space="preserve">
+    <value>Paste</value>
+  </data>
+  <data name="ToolTip_Repeate_selected_drawings_or_images" xml:space="preserve">
+    <value>Repeate selected drawings or images</value>
+  </data>
+  <data name="ToolTip_Reset_rotation" xml:space="preserve">
+    <value>Reset rotation</value>
+  </data>
+  <data name="ToolTip_Rotate" xml:space="preserve">
+    <value>Rotate</value>
+  </data>
+  <data name="ToolTip_Rotate_left_on_1_degree" xml:space="preserve">
+    <value>Rotate left on 1 degree</value>
+  </data>
+  <data name="ToolTip_Rotate_left_on_45_degree" xml:space="preserve">
+    <value>Rotate left on 45 degree</value>
+  </data>
+  <data name="ToolTip_Rotate_right_on_1_degree" xml:space="preserve">
+    <value>Rotate right on 1 degree</value>
+  </data>
+  <data name="ToolTip_Rotate_right_on_45_degree" xml:space="preserve">
+    <value>Rotate right on 45 degree</value>
+  </data>
+  <data name="ToolTip_Rotate_selected_objects" xml:space="preserve">
+    <value>Rotate selected objects</value>
+  </data>
+  <data name="ToolTip_Rotation_angle" xml:space="preserve">
+    <value>Rotation angle</value>
+  </data>
+  <data name="ToolTip_Select_by_lasso" xml:space="preserve">
+    <value>Select by lasso</value>
+  </data>
+  <data name="ToolTip_Select_by_rectangle" xml:space="preserve">
+    <value>Select by rectangle</value>
+  </data>
+  <data name="ToolTip_Send_to_back" xml:space="preserve">
+    <value>Send to back</value>
+  </data>
+  <data name="ToolTip_Ungroup_selected_drawings" xml:space="preserve">
+    <value>Ungroup selected drawings</value>
+  </data>
+  <data name="Title_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Title_Clear" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="Title_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Title_Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Title_Information" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="Title_No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Title_Ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Title_Warning" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="Title_Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="Message_Do_you_want_to_clear_all_from_this_work_table" xml:space="preserve">
+    <value>Do you want to clear all from this work table?</value>
+  </data>
+  <data name="Title_Add_picture_from_web_camera" xml:space="preserve">
+    <value>Add picture from web-camera</value>
+  </data>
+  <data name="ToolTip_Pause_capture_from_web_camera" xml:space="preserve">
+    <value>Pause capture from web-camera</value>
+  </data>
+  <data name="ToolTip_Continue_capture_from_web_camera" xml:space="preserve">
+    <value>Continue capture from web-camera</value>
+  </data>
+  <data name="ToolTip_Add_captured_image_to_work_table" xml:space="preserve">
+    <value>Add captured image to work table</value>
+  </data>
+  <data name="ToolTip_Cancel_capture" xml:space="preserve">
+    <value>ToolTip Cancel capture</value>
+  </data>
+  <data name="ToolTip_Timer_to_capture_from_web_camera" xml:space="preserve">
+    <value>Timer to capture from web camera</value>
+  </data>
+  <data name="ToolTip_Cancel_capture_from_web_camera" xml:space="preserve">
+    <value>Cancel capture from web camera</value>
+  </data>
+  <data name="Title_About" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="Title_Copyright" xml:space="preserve">
+    <value>Copyright</value>
+  </data>
+  <data name="Title_Help" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="Title_Licenses" xml:space="preserve">
+    <value>Licenses</value>
+  </data>
+  <data name="ToolTip_Help" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="Message_File_with_license_does_not_exist" xml:space="preserve">
+    <value>File with license does not exist</value>
+  </data>
+  <data name="Message_File_extension_is_not_supported" xml:space="preserve">
+    <value>File extension is not supported</value>
+  </data>
+  <data name="Title_Library_DirectShowNET" xml:space="preserve">
+    <value>DirectShowNET Library</value>
+  </data>
+  <data name="Title_Libraries_used" xml:space="preserve">
+    <value>Libraries used</value>
+  </data>
+  <data name="ToolTip_About_ForQuilt" xml:space="preserve">
+    <value>About ForQuilt</value>
+  </data>
+  <data name="Title_Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="Title_Paste" xml:space="preserve">
+    <value>Paste</value>
+  </data>
+  <data name="Message_Clipboard_does_not_contain_any_image_as_expected" xml:space="preserve">
+    <value>Clipboard does not contain any image as expected</value>
+  </data>
+  <data name="Title_Copy" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="Message_Objects_were_not_copied" xml:space="preserve">
+    <value>Objects were not copied</value>
+  </data>
+  <data name="Title_Clipboard" xml:space="preserve">
+    <value>Clipboard</value>
+  </data>
+  <data name="ToolTip_Clipboard" xml:space="preserve">
+    <value>Clipboard</value>
+  </data>
+  <data name="ToolTip_Show_Clipboard" xml:space="preserve">
+    <value>Show clipboard</value>
+  </data>
+</root>

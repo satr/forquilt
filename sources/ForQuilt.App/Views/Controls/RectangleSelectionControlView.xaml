@@ -1,0 +1,18 @@
+﻿<!--
+Copyright © 2013 ForQuilt.CodePlex.com
+All rights reserved.       
+-->
+<UserControl x:Class="ForQuilt.App.Views.Controls.RectangleSelectionControlView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid  x:Name="GridControl" Background="Transparent">
+        <Canvas>
+            <Rectangle x:Name="SelectionBoxControl" StrokeThickness="2" Stroke="#FF7E7EC1" StrokeStartLineCap="Square" StrokeDashArray="2 2" >
+            </Rectangle>
+        </Canvas>
+    </Grid>
+</UserControl>

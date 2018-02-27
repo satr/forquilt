@@ -1,0 +1,43 @@
+﻿<!--
+Copyright © 2013 ForQuilt.CodePlex.com
+All rights reserved.       
+-->
+<Window x:Class="ForQuilt.App.Views.AddImageCapturedFromCameraView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="clr-namespace:ForQuilt.App.Views.Controls"  
+        xmlns:r="clr-namespace:ForQuilt.App.Helpers.Localization" 
+        xmlns:forms="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+        Title="{r:Res Name=Title_Add_picture_from_web_camera}" Height="589.552" Width="782" WindowStartupLocation="CenterScreen" Icon="/Properties\Images/Logo32.png">
+    <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
+            <Button MinHeight="32" MinWidth="32" Command="{Binding ImportCommand}" Margin="1,1,1,1" 
+                    ToolTip="{r:Res Name=ToolTip_Add_captured_image_to_work_table}" >
+                <Image Source="/Properties\Images/AddCapturedImageFromCameraToWorkTableIcon.png" />
+            </Button>
+            <Button MinHeight="32" MinWidth="32" Command="{Binding PauseCommand}" Margin="1,1,1,1"  
+                    ToolTip="{r:Res Name=ToolTip_Pause_capture_from_web_camera}">
+                <Image Source="/Properties\Images/PauseCaptureImageFromCameraIcon.png" />
+            </Button>
+            <Button MinHeight="32" MinWidth="32" Command="{Binding RepeatCommand}" Margin="1,1,1,1"  
+                    ToolTip="{r:Res Name=ToolTip_Continue_capture_from_web_camera}">
+                <Image Source="/Properties\Images/ContinueCaptureImageFromCameraIcon.png" />
+            </Button>
+            <GroupBox Header="{r:Res Name=Title_Timer}" ToolTip="{r:Res Name=ToolTip_Timer_to_capture_from_web_camera}">
+                <controls:TimerControlView x:Name="TimerControl" StartCommand="{Binding RepeatCommand}" FinishCommand="{Binding PauseCommand}" />
+            </GroupBox>
+            <Button MinHeight="32" MinWidth="32" Command="{Binding CancelCommand}" Margin="1,1,1,1"  
+                    ToolTip="{r:Res Name=ToolTip_Cancel_capture_from_web_camera}">
+                <Image Source="/Properties\Images/CancelCaptureImageFromCameraIcon.png" />
+            </Button>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+        <WindowsFormsHost MinHeight="96" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="96" Width="128" Margin="1,1,1,1">
+            <forms:PictureBox x:Name="CapturePreviewArea" Height="96" Width="128" />
+        </WindowsFormsHost>
+        <WindowsFormsHost MinHeight="500" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="480" Width="640" Margin="1,1,1,1">
+            <forms:PictureBox x:Name="CaptureArea" Height="480" Width="640" />
+        </WindowsFormsHost>
+        </StackPanel>
+    </StackPanel>
+</Window>

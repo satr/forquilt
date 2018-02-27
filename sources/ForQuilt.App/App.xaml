@@ -1,0 +1,14 @@
+﻿<!--
+Copyright © 2013 ForQuilt.CodePlex.com
+All rights reserved.       
+-->
+<Application x:Class="ForQuilt.App.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="Views\MainView.xaml"
+             Exit="App_OnExit"
+             DispatcherUnhandledException="App_OnDispatcherUnhandledException">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

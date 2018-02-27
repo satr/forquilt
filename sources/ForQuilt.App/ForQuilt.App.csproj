@@ -1,0 +1,418 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{440BD43A-E5C6-4166-979C-F49814F3B6E9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ForQuilt.App</RootNamespace>
+    <AssemblyName>ForQuilt</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Properties\Images\ForQuilt.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="DirectShowLib-2005, Version=2.1.0.0, Culture=neutral, PublicKeyToken=67e7b740cdfc2d3f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\DirectShowLib-2005.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationUI, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="ReachFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Commands\Application\CloseViewCommand.cs" />
+    <Compile Include="Commands\Application\ShowAboutCommand.cs" />
+    <Compile Include="Commands\Application\ShowViewCommand.cs" />
+    <Compile Include="Commands\WorkArea\Drawing\WorkAreaChangeColorCommand.cs" />
+    <Compile Include="Commands\WorkArea\Drawing\WorkAreaChangeThicknessCommand.cs" />
+    <Compile Include="Commands\WorkArea\Drawing\WorkAreaDrawShapeCommand.cs" />
+    <Compile Include="Commands\WorkArea\Drawing\WorkAreaRepeateSelectionCommand.cs" />
+    <Compile Include="Commands\RegisteredCommandBase.cs" />
+    <Compile Include="Commands\WorkArea\Selecting\WorkAreaGroupDrawingsCommand.cs" />
+    <Compile Include="Commands\WorkArea\Selecting\WorkAreaUnGroupDrawingsCommand.cs" />
+    <Compile Include="Helpers\Localization\ResExtension.cs" />
+    <Compile Include="Helpers\SelectionHelper.cs" />
+    <Compile Include="Helpers\SerializationHelper.cs" />
+    <Compile Include="Helpers\WPFHelper.cs" />
+    <Compile Include="Helpers\EventBroker.cs" />
+    <Compile Include="Helpers\Tuple.cs" />
+    <Compile Include="Commands\WorkArea\Ordering\WorkAreaBringToFrontCommand.cs" />
+    <Compile Include="Commands\WorkArea\Ordering\WorkAreaOrderingCommandBase.cs" />
+    <Compile Include="Commands\WorkArea\Ordering\WorkAreaSendToBackCommand.cs" />
+    <Compile Include="Commands\WorkArea\WorkAreaEditingCommandBase.cs" />
+    <Compile Include="Commands\CommandBroker.cs" />
+    <Compile Include="Commands\SaveImages\SaveImageToFileCommandBase.cs" />
+    <Compile Include="Commands\SaveImages\SaveSelectedAreaAsImageFileCommand.cs" />
+    <Compile Include="Commands\SaveImages\SaveWorkAreaAsImageFileCommand.cs" />
+    <Compile Include="Commands\AddImages\AddImageCapturedFromCamera\AddImageCapturedFromCameraCommand.cs" />
+    <Compile Include="Commands\AddImages\AddImageFromFile\AddImageFromFileCommand.cs" />
+    <Compile Include="Commands\AddImages\AddImageCapturedFromCamera\AddImageCapturedFromCameraCancelCommand.cs" />
+    <Compile Include="Commands\AddImages\AddImageCapturedFromCamera\AddImageCapturedFromCameraAddToWorkTableCommand.cs" />
+    <Compile Include="Commands\AddImages\AddImageCapturedFromCamera\AddImageCapturedFromCameraRepeatCommand.cs" />
+    <Compile Include="Commands\AddImages\AddImageCapturedFromCamera\AddImageCapturedFromCameraCommandBase.cs" />
+    <Compile Include="Commands\ImageFileOperationCommandBase.cs" />
+    <Compile Include="Commands\WorkArea\Editing\WorkAreaCropCommand.cs" />
+    <Compile Include="Commands\WorkArea\Editing\WorkAreaDeleteCommand.cs" />
+    <Compile Include="Commands\WorkArea\Drawing\WorkAreaEraseCommand.cs" />
+    <Compile Include="Commands\WorkArea\WorkAreaCommandBase.cs" />
+    <Compile Include="Commands\WorkArea\Drawing\WorkAreaDrawCommand.cs" />
+    <Compile Include="Commands\WorkArea\Selecting\WorkAreaSelectByLassoCommand.cs" />
+    <Compile Include="Commands\WorkArea\Selecting\WorkAreaSelectByRectangleCommand.cs" />
+    <Compile Include="Helpers\MessageDialogHelper.cs" />
+    <Compile Include="Helpers\GeometryHelper.cs" />
+    <Compile Include="Helpers\ImageHelper.cs" />
+    <Compile Include="Models\ClipboardModel.cs" />
+    <Compile Include="Models\DrawRectangleModel.cs" />
+    <Compile Include="Models\DrawShapeModel.cs" />
+    <Compile Include="Models\ModelStorage.cs" />
+    <Compile Include="Models\RepeateSelectionModel.cs" />
+    <Compile Include="Models\Strokes\EllipseStroke.cs" />
+    <Compile Include="Models\Strokes\LineStroke.cs" />
+    <Compile Include="Models\Strokes\OverlayRepeatOperationStroke.cs" />
+    <Compile Include="Models\Strokes\RectangleStroke.cs" />
+    <Compile Include="Models\Strokes\ShapeStrokeBase.cs" />
+    <Compile Include="Models\CaptureImage\Capture.cs" />
+    <Compile Include="Models\WorkAreaCanvasState.cs" />
+    <Compile Include="Models\WorkAreaModel.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="ViewModels\AboutViewModel.cs" />
+    <Compile Include="ViewModels\Controls\TimerControlViewModel.cs" />
+    <Compile Include="ViewModels\AddImageCapturedFromCameraViewModel.cs" />
+    <Compile Include="Commands\AddImages\AddImageCapturedFromCamera\AddImageCapturedFromCameraPauseCommand.cs" />
+    <Compile Include="Commands\WorkArea\Editing\WorkAreaClearCommand.cs" />
+    <Compile Include="Commands\Application\ExitFromAppCommand.cs" />
+    <Compile Include="ViewModels\Controls\ColorPickControlViewModel.cs" />
+    <Compile Include="ViewModels\Controls\DrawingThicknessControlViewModel.cs" />
+    <Compile Include="ViewModels\Controls\RectangleSelectionControlViewModel.cs" />
+    <Compile Include="ViewModels\Controls\RotationControlViewModel.cs" />
+    <Compile Include="Commands\WorkArea\RotateImage\WorkAreaRotationCommandBase.cs" />
+    <Compile Include="Commands\WorkArea\RotateImage\WorkAreaRotateLeftCommand.cs" />
+    <Compile Include="Commands\WorkArea\RotateImage\WorkAreaRotateRightCommand.cs" />
+    <Compile Include="Commands\WorkArea\RotateImage\WorkAreaResetRotationCommand.cs" />
+    <Compile Include="ViewModels\MessageDialogViewModel.cs" />
+    <Compile Include="ViewModels\Controls\HorizontalToolBoxControlViewModel.cs" />
+    <Compile Include="Commands\WorkArea\Editing\WorkAreaPasteCommand.cs" />
+    <Compile Include="Commands\WorkArea\Editing\WorkAreaCutCommand.cs" />
+    <Compile Include="Commands\WorkArea\Editing\WorkAreaCopyCommand.cs" />
+    <Compile Include="ViewModels\Controls\VerticalToolBoxControlViewModel.cs" />
+    <Compile Include="ViewModels\Controls\WorkAreaControlViewModel.cs" />
+    <Compile Include="Views\AboutView.xaml.cs">
+      <DependentUpon>AboutView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\DrawLineControlView.xaml.cs">
+      <DependentUpon>DrawLineControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\DrawShapeControlView.xaml.cs">
+      <DependentUpon>DrawShapeControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\TimerControlView.xaml.cs">
+      <DependentUpon>TimerControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddImageCapturedFromCameraView.xaml.cs">
+      <DependentUpon>AddImageCapturedFromCameraView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\ColorPickControlView.xaml.cs">
+      <DependentUpon>ColorPickControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\DrawingThicknessControlView.xaml.cs">
+      <DependentUpon>DrawingThicknessControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\RectangleSelectionControlView.xaml.cs">
+      <DependentUpon>RectangleSelectionControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\RotationControlView.xaml.cs">
+      <DependentUpon>RotationControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LicensesView.xaml.cs">
+      <DependentUpon>LicensesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\LicensesViewModel.cs" />
+    <Compile Include="Views\MessageDialogView.xaml.cs">
+      <DependentUpon>MessageDialogView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\HorizontalToolBoxControlView.xaml.cs">
+      <DependentUpon>HorizontalToolBoxControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\VerticalToolBoxControlView.xaml.cs">
+      <DependentUpon>VerticalToolBoxControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\WorkAreaControlView.xaml.cs">
+      <DependentUpon>WorkAreaControlView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\AboutView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Controls\DrawLineControlView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Controls\DrawShapeControlView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Controls\TimerControlView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AddImageCapturedFromCameraView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Controls\ColorPickControlView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Controls\DrawingThicknessControlView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Controls\RectangleSelectionControlView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Controls\RotationControlView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LicensesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="Views\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Views\MessageDialogView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Controls\HorizontalToolBoxControlView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Controls\VerticalToolBoxControlView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Controls\WorkAreaControlView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ru-RU.resx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Properties\Images\SelectAreaByRectangleIcon.png" />
+    <Resource Include="Properties\Images\ExportAreaToFileIcon.png" />
+    <Resource Include="Properties\Images\ResetRotationIcon.png" />
+    <Resource Include="Properties\Images\RotateRight1degIcon.png" />
+    <Resource Include="Properties\Images\RotateRight45degIcon.png" />
+    <Resource Include="Properties\Images\RotateLeft45degIcon.png" />
+    <Resource Include="Properties\Images\RotateLeft1degIcon.png" />
+    <Resource Include="Properties\Images\ClearIcon.png" />
+    <Resource Include="Properties\Images\ExitIcon.png" />
+    <Resource Include="Properties\Images\ExportToFileIcon.png" />
+    <Resource Include="Properties\Images\ImportFromFileIcon.png" />
+    <Resource Include="Properties\Images\AddCapturedImageFromCameraToWorkTableIcon.png" />
+    <Resource Include="Properties\Images\CutIcon.png" />
+    <Resource Include="Properties\Images\PasteIcon.png" />
+    <Resource Include="Properties\Images\CopyIcon.png" />
+    <Resource Include="Properties\Images\DrawIcon.png" />
+    <Resource Include="Properties\Images\EraseIcon.png" />
+    <Resource Include="Properties\Images\SelectAreaByLassoIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Properties\Images\CropIcon.png" />
+    <Resource Include="Properties\Images\DeleteIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Properties\Images\BringToFrontIcon.png" />
+    <Resource Include="Properties\Images\SendToBackIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Properties\Images\DrawLineIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Properties\Images\ChangeColorIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Properties\Images\ChangeThicknessIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Properties\Images\GroupDrawingsIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Properties\Images\UnGroupDrawingsIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Properties\Images\DrawEllipseIcon.png" />
+    <Resource Include="Properties\Images\DrawRectangleIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DirectShow.NET.License.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DirectShowLib-2005.dll" />
+    <Content Include="License.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Properties\Images\ShowClipboardIcon.png" />
+    <Resource Include="Properties\Images\ForQuilt.ico" />
+    <Resource Include="Properties\Images\AboutIcon.png" />
+    <Resource Include="Properties\Images\HelpIcon.png" />
+    <Resource Include="Properties\Images\Logo100.png" />
+    <Resource Include="Properties\Images\Logo128.png" />
+    <Resource Include="Properties\Images\Logo16.png" />
+    <Resource Include="Properties\Images\Logo32.png" />
+    <Resource Include="Properties\Images\Logo64.png" />
+    <Resource Include="Properties\Images\CancelCaptureImageFromCameraIcon.png" />
+    <Resource Include="Properties\Images\ContinueCaptureImageFromCameraIcon.png" />
+    <Resource Include="Properties\Images\PauseCaptureImageFromCameraIcon.png" />
+    <Resource Include="Properties\Images\RepeateSelectionIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

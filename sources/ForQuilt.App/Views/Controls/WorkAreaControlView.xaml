@@ -1,0 +1,31 @@
+﻿<!--
+Copyright © 2013 ForQuilt.CodePlex.com
+All rights reserved.       
+-->
+<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:controls="clr-namespace:ForQuilt.App.Views.Controls" 
+             xmlns:r="clr-namespace:ForQuilt.App.Helpers.Localization"
+             x:Class="ForQuilt.App.Views.WorkAreaControlView"
+             mc:Ignorable="d">
+    <Grid>
+        <InkCanvas x:Name="ClipboardCanvas" IsEnabled="False" Margin="6,28,0,0" />
+        <TabControl x:Name="WorkAreas" SelectionChanged="WorkAreaChanged">
+            <TabItem Header="{r:Res Name=Title_Main_Work_Table}">
+                <Grid Background="Transparent">
+                    <InkCanvas x:Name="MainWorkTableCanvas" />
+                    <controls:RectangleSelectionControlView x:Name="MainWorkTableCanvasSelector" Visibility="Collapsed" />
+                </Grid>
+                </TabItem>
+            <TabItem Header="{r:Res Name=Title_Sketch_Work_Table}">
+                <Grid Background="Transparent">
+                    <InkCanvas x:Name="SketchWorkTableCanvas" />
+                    <controls:RectangleSelectionControlView x:Name="SketchWorkTableCanvasSelector" Visibility="Collapsed" />
+                    </Grid>
+                </TabItem>
+        </TabControl>
+    </Grid>
+</UserControl>

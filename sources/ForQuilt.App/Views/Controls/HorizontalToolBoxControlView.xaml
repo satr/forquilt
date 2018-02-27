@@ -1,0 +1,91 @@
+﻿<!--
+Copyright © 2013 ForQuilt.CodePlex.com
+All rights reserved.       
+-->
+<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:r="clr-namespace:ForQuilt.App.Helpers.Localization"
+             xmlns:controls="clr-namespace:ForQuilt.App.Views.Controls"
+             x:Class="ForQuilt.App.Views.HorizontalToolBoxControlView"  
+             mc:Ignorable="d">
+        <StackPanel Orientation="Horizontal">
+            <GroupBox Header="{r:Res Name=Title_Edit}">
+                <StackPanel Orientation="Horizontal">
+                    <Button Command="{Binding CutCommand}" Margin="1,1,1,1" ToolTip="{r:Res Name=ToolTip_Cut}" >
+                        <Image Source="/Properties\Images\CutIcon.png" />
+                    </Button>
+                    <Button Command="{Binding CopyCommand}" Margin="1,1,1,1" ToolTip="{r:Res Name=ToolTip_Copy}">
+                        <Image Source="/Properties\Images/CopyIcon.png" />
+                    </Button>
+                    <Button Command="{Binding PasteCommand}" Margin="1,1,1,1" ToolTip="{r:Res Name=ToolTip_Paste}" >
+                        <Image Source="/Properties\Images/PasteIcon.png" />
+                    </Button>
+                    <Button Command="{Binding CropCommand}" Margin="1,1,1,1" ToolTip="{r:Res Name=ToolTip_Crop}" >
+                        <Image Source="/Properties\Images/CropIcon.png" />
+                    </Button>                    
+                    <Button Command="{Binding DeleteCommand}" Margin="1,1,1,1" ToolTip="{r:Res Name=ToolTip_Delete}" >
+                        <Image Source="/Properties\Images/DeleteIcon.png" />
+                    </Button>
+                    <Button Command="{Binding ClearWorkAreaCommand}" Margin="1,1,1,1" ToolTip="{r:Res Name=ToolTip_Clear_all}">
+                        <Image Source="/Properties\Images/ClearIcon.png" />
+                    </Button>
+                </StackPanel>
+            </GroupBox>
+        <GroupBox Header="{r:Res Name=Title_Rotate}" ToolTip="{r:Res Name=ToolTip_Rotate_selected_objects}">
+            <controls:RotationControlView />
+        </GroupBox>
+        <GroupBox Header="{r:Res Name=Title_Order}">
+                <StackPanel Orientation="Horizontal">
+                    <Button Command="{Binding BringToFrontCommand}" Margin="1,1,1,1" ToolTip="{r:Res Name=ToolTip_Bring_to_front}" >
+                        <Image Source="/Properties\Images/BringToFrontIcon.png" />
+                    </Button>
+                    <Button Command="{Binding SendToBackCommand}" Margin="1,1,1,1" ToolTip="{r:Res Name=ToolTip_Send_to_back}">
+                        <Image Source="/Properties\Images/SendToBackIcon.png" />
+                    </Button>
+                </StackPanel>
+            </GroupBox>
+            <GroupBox Header="{r:Res Name=Title_Add_Open}">
+                <StackPanel Orientation="Horizontal">
+                    <Button Command="{Binding ImportImageFromFileCommand}" Margin="1,1,1,1" 
+                            ToolTip="{r:Res Name=ToolTip_Import_image_from_file}" >
+                        <Image Source="/Properties\Images/ImportFromFileIcon.png" />
+                    </Button>
+                    <Button Command="{Binding ImportImageFromCameraCommand}" Margin="1,1,1,1" 
+                            ToolTip="{r:Res Name=ToolTip_Add_captured_image_to_work_table}">
+                        <Image Source="/Properties\Images/AddCapturedImageFromCameraToWorkTableIcon.png" />
+                    </Button>
+                </StackPanel>
+            </GroupBox>
+            <GroupBox Header="{r:Res Name=Title_Save}">
+                <StackPanel Orientation="Horizontal">
+                    <Button Command="{Binding ExportWorkAreaAsImageToFileCommand}" Margin="1,1,1,1"
+                            ToolTip="{r:Res Name=ToolTip_Export_work_area_as_image_to_file}">
+                        <Image Source="/Properties\Images/ExportToFileIcon.png" />
+                    </Button>
+                    <Button Command="{Binding ExportSelectedAreaAsImageToFileCommand}" Margin="1,1,1,1"
+                            ToolTip="{r:Res Name=ToolTip_Export_selected_area_as_image_to_file}">
+                        <Image Source="/Properties\Images/ExportAreaToFileIcon.png" />
+                    </Button>
+                </StackPanel>
+            </GroupBox>
+            <GroupBox Header=" ">
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="ShowClipboardButton" Margin="1,1,1,1"
+                            ToolTip="{r:Res Name=ToolTip_Show_Clipboard}">
+                        <Image Source="/Properties\Images\ShowClipboardIcon.png" />
+                    </Button>
+                    <Button Command="{Binding ShowAboutCommand}" Margin="1,1,1,1"
+                            ToolTip="{r:Res Name=ToolTip_About_ForQuilt}">
+                        <Image Source="/Properties\Images\AboutIcon.png" />
+                    </Button>
+                    <Button Command="{Binding ExitFromAppCommand}" Margin="1,1,1,1"
+                            ToolTip="{r:Res Name=ToolTip_Exit}">
+                        <Image Source="/Properties\Images\ExitIcon.png" />
+                    </Button>
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>
+</UserControl>
